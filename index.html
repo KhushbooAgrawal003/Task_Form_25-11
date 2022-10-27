@@ -1,146 +1,169 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Group 7 Website</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Times New Roman;
-    margin: 0;
-}
-
-.header {
-    padding: 80px;
-    text-align: center;
-    background: #1abc9c;
-    color: white;
-}
-
-.header h1 {
-    font-size: 40px;
-}
-
-.navbar {
-    overflow: hidden;
-    background-color: #333;
-}
-
-.navbar a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-}
-
-.navbar a.right {
-    float: right;
-}
-
-.navbar a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-.row {  
-    display: -ms-flexbox; 
-    display: flex;
-    -ms-flex-wrap: wrap; 
-    flex-wrap: wrap;
-}
-
-
-.side {
-    -ms-flex: 30%; 
-    flex: 30%;
-    background-color: #f1f1f1;
-    padding: 20px;
-}
-
-.main {   
-    -ms-flex: 70%; 
-    flex: 70%;
-    background-color: white;
-    padding: 20px;
-}
-
-.fakeimg {
-    background-color: #aaa;
-    width: 100%;
-    padding: 20px;
-}
-
-.footer {
-    padding: 20px;
-    text-align: center;
-    background: #ddd;
-}
-
-
-    .row {   
-        flex-direction: column;
-    }
-}
-
-
-screen and (max-width: 400px) {
-    .navbar a {
-        float: none;
-        width: 100%;
-    }
-}
-</style>
+    <title>Group 7 Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=4">
+    <link rel="stylesheet" href="./style.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
+
 <body>
+    <header>
+        <h1>Group 7: Hung</h1>
+    </header>
 
-<div class="header">
-  <h1>Name</h1>
-  <p>image</p>
-</div>
+    <nav>
+        <a href="http://127.0.0.4:5500/index.html">Home</a>
+        <a href="#task">Task list</a>
+        <a href="#new">Add Task</a>
+    </nav>
 
-<div class="navbar">
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#" class="right">Link</a>
-</div>
+    <div class="big-container" id="task">
+        <h1>Task list</h1>
+        <h2>Current task:</h2>
 
-<div class="row">
-  <div class="side">
-      <h2>About us</h2>
-      <h5>photo:</h5>
-      <div class="fakeimg" style="height:200px;">image</div>
-      <p>Introduction</p>
-      <h3>More</h3>
-      <p>More</p>
-      <div class="fakeimg" style="height:60px;">image/video</div><br>
-      <div class="fakeimg" style="height:60px;">image/video</div><br>
-      <div class="fakeimg" style="height:60px;">image/video</div>
-  </div>
-  <div class="main">
-      <h2>Title</h2>
-      <h5>Subtitle</h5>
-      <div class="fakeimg" style="height:200px;">image</div>
-      <p>Text</p>
-      <p>information</p>
-      <br>
-      <h2>Title</h2>
-      <h5>Subtitle</h5>
-      <div class="fakeimg" style="height:200px;">image</div>
-      <p>text</p>
-      <p>text</p>
-  </div>
-</div>
+        <div class="row row-cols-1 row-cols-md-3 g-4" >
+            <!-- First card h-100 goes here -->
+            <div class="col box1">
+                <div class="card h-100 bg-success">
+                    <div class="task-box1">
+                        <p>Name: Brainstroming
+                        <p>Description: Thinking how we should design the website.</p>
+                        <p>Assigned to: whatever name</p>
+                        <p>Due date: 28/10/2022</p>
+                        <p>Status: Done.</p>
+                    </div>
+                </div>
+            </div>
 
-<div class="footer">
-  <h2>Bottom text</h2>
-</div>
 
+            <!-- First card h-100 goes here -->
+            <div class="col box2">
+                <div class="card h-100 bg-info">
+                    <div class="task-box2">
+                        <p>Name: Draw a wireframe
+                        <p>Description: Draw a wireframe based on our idea.</p>
+                        <p>Assigned to: whatever name</p>
+                        <p>Due date: 28/10/2022</p>
+                        <p>Status: Done.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- First card h-100 goes here -->
+            <div class="col box3">
+                <div class="card h-100 bg-primary">
+                    <div class="task-box3">
+                        <p>Name: Start coding using HTML
+                        <p>Description: Using Html to draw the skeletion of our website.</p>
+                        <p>Assigned to: whatever name</p>
+                        <p>Due date: 28/10/2022</p>
+                        <p>Status: In progress.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- First card h-100 goes here -->
+            <div class="col box4">
+                <div class="card h-100 bg-warning">
+                    <div class="task-box4">
+                        <p>Name: Using CSS to add style to our website
+                        <p>Description: Add css code to make the visual of our website look better..</p>
+                        <p>Assigned to: whatever name</p>
+                        <p>Due date: 28/10/2022</p>
+                        <p>Status: In progress.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- First card h-100 goes here -->
+            <div class="col box5">
+                <div class="card h-100 bg-danger">
+                    <div class="task-box5">
+                        <p>Name: Fixing bugs</p>
+                        <p>Description: Try to debug our website..</p>
+                        <p>Assigned to: whatever name</p>
+                        <p>Due date: 28/10/2022</p>
+                        <p>Status: To do.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class ="new-task" id="new">
+        <h1>Add a new task</h1>
+        <h5>To add another task, please fill the form below:</h5>
+    <div class="form">
+        <form action="submit.html" method="POST">
+            <div class="mb-3 row">
+                <label for="name" class="col-sm-2 col-form-label">Name: </label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Newbie" required
+                        pattern="[a-zA-Z]+" minlength="2">
+                </div>
+            </div>
+            <br>
+            <div class="mb-3 row">
+                <label for="description" class="col-sm-2 col-form-label">Description: </label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="description" id="description" required minlength="5">
+                </div>
+            </div>
+            <br>
+            <div class="mb-3 row">
+                <label for="assign" class="col-sm-2 col-form-label">Assigned to: </label>
+                <div class="col-sm-10">
+                    <input type="tel" class="form-control" name="assign" id="assign" placeholder="newbie" required
+                        pattern="[a-zA-Z]+" minlength="2">
+                </div>
+            </div>
+            <br>
+            <div class="mb-3 row">
+                <label for="date" class="col-sm-2 col-form-label">Due date: </label>
+                <div class="col-sm-10">
+                    <input type="date" class="form-control" name="phone" row row-cols-4 row-cols-md-2 g-445678"
+                        pattern="[0-9]{10}">
+                </div>
+            </div>
+            <br>
+            <div class="mb-3 row">
+                <section class="drop-down">
+                    <label for="status" class="col-sm-2 col-form-label">Status: </label>
+                    <select name="status" id="status">
+                        <option value="to-do">To do</option>
+                        <option value="progress">In progress</option>
+                        <option value="review">Review</option>
+                        <option value="done">Done</option>
+                    </select>
+                </section>
+            </div>
+            <br>
+            <div class="submit">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    </div>
+    <footer>
+        <p>Copyright 2022 task list. All right reserved</p>
+    </footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
 </body>
+
+</html>
+</body>
+
 </html>

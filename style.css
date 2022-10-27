@@ -1,0 +1,74 @@
+html {
+    text-align: center;
+    color: red;
+    font-size: 16px;
+}
+
+nav {
+    background-color: #b71313;
+    text-align: left;
+    padding: 0.5rem;
+}
+
+nav a {
+    margin-left: 1rem;
+    padding: 0.5rem;
+    list-style: none;
+    text-decoration: none;
+    color:black;
+    background-color: #a2a2f9;
+}
+
+header h1 {
+    background-color: #a7881a;
+    padding: 2rem;
+    margin: 0;
+}
+
+.big-container {
+    background-color: #cbdcdd;
+    padding: 1rem;
+}
+
+.big-container h2 {
+    padding-bottom: 0.5rem;
+    text-align: left;
+}
+
+.new-task {
+    background-color: #6d89a9;
+    padding: 2rem;
+}
+
+.new-task h5 {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.form {
+    text-align: left;
+    font-weight: bold;
+}
+
+.submit {
+    text-align: center;
+}
+
+footer {
+    padding: 1rem;
+    background-color: #b71313;
+    color:aliceblue;
+}
+
+@media only screen and (max-width: 350px)  {
+    nav a{
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;        
+        justify-content: center;
+    }
+
+    nav {
+        background-color: #a2a2f9;
+    }
+}
