@@ -101,7 +101,7 @@
         <h1>Add a new task</h1>
         <h5>To add another task, please fill the form below:</h5>
     <div class="form">
-            <form name="myForm" action="#"></form>
+            <form name="myForm" action="#" method="post"></form>
             <div class="mb-3 row">
                 <label for="name" class="col-sm-2 col-form-label">Name: </label>
                 <div class="col-sm-10">
@@ -114,9 +114,11 @@
             <div class="mb-3 row">
                 <label for="description" class="col-sm-2 col-form-label">Description: </label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="description" id="description" required minlength="5">
+                    <textarea class="form-control" style="width: 70%"  id="taskDescription" rows="5"></textarea>
+                    <div class="valid-feedback">Great job!</div>
+                    <div class="invalid-feedback">Minimum of 15 characters is required.</div>
                 </div>
-            </div>
+            </div> 
             <br>
             <div class="mb-3 row">
                 <label for="assign" class="col-sm-2 col-form-label">Assigned to: </label>
@@ -129,8 +131,8 @@
             <div class="mb-3 row">
                 <label for="date" class="col-sm-2 col-form-label">Due date: </label>
                 <div class="col-sm-10">
-                    <input type="date" class="form-control" name="date" id="dueDate" row row-cols-4 row-cols-md-2 g-445678"
-                        pattern="[0-9]{10}">
+                    <input type="date" class="form-control" name="date" id="dueDate" row row-cols-4 row-cols-md-2 g-445678>
+                    <p id="valid1"></p>
                 </div>
             </div>
             <br>
@@ -146,19 +148,14 @@
                 </section>
             </div>
             <br>
-            <button>
+            <div>
                 <input type="submit" value="Submit" id="btnSubmit" onclick="validateTaskForm()"/>
-            </button>
+            </div>
         </form>
     </div>
     </div>
                    <!--task description -->
-    <div class="form-group" style="text-align: center">
-        <label for="taskDescription" style="margin: 40px">Task Description</label>
-        <textarea class="form-control" style="width: 70%"  id="taskDescription" rows="5"></textarea>
-        <div class="valid-feedback">Great job!</div>
-        <div class="invalid-feedback">Minimum of 15 characters is required.</div>
-    </div>
+
 
 
     <footer>
