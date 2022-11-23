@@ -72,3 +72,10 @@ footer {
         background-color: #a2a2f9;
     }
 }
+
+.form-control {
+    margin: 0 auto; 
+    margin-bottom: 15px;
+    margin-top: 15px;
+    max-width: 600px;
+}
