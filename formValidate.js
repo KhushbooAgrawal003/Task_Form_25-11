@@ -93,9 +93,13 @@ function currentDate() {
 currentDate(); //Calling the current date function
 
 // Khushboo's code for Status:
+function validStatus(){
 const validateStatus = document.getElementById('status');
 if (validateStatus.selectedIndex === 0) 
 {
     document.getElementById('error1').innerHTML = 'Please select an status option';
     return false;
 }
+}
+validStatus();
+
