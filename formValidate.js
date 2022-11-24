@@ -1,20 +1,26 @@
 const regEx = /^[A-Za-z\s]*$/;
-function validateTaskForm() {
-    function validName() {
+function validateTaskForm()
+ {
+    function validName() 
+    {
         let userInput = document.getElementById("name").value;
-        if (!regEx.test(userInput) && userInput.length < 8) {
-            document.getElementById("valid").innerHTML = "Must have at least 8 characters, only contains letters";
+        if (!regEx.test(userInput) && userInput.length < 8)
+         {
+            document.getElementById("valid").innerHTML = "The Name at least 8 characters and only contain letters";
             return false;
         }
-        else if (!regEx.test(userInput)) {
-            document.getElementById("valid").innerHTML = "Only contains letters";
+        else if (!regEx.test(userInput)) 
+        {
+            document.getElementById("valid").innerHTML = "The Name field Only contain letters";
             return false;
         }
-        else if (regEx.test(userInput) && userInput.length < 8) {
-            document.getElementById("valid").innerHTML = "Must have at least 8 characters.";
+        else if (regEx.test(userInput) && userInput.length < 8)
+         {
+            document.getElementById("valid").innerHTML = "The Name should be more then 8 characters";
             return false;
         }
-        else {
+        else 
+        {
             document.getElementById("valid").innerHTML = "";
             return true;
         }
@@ -26,11 +32,11 @@ function validateTaskForm() {
         const currentDate = new Date();
         validDate = new Date(validDate)
         if (validDate < currentDate) {
-            document.getElementById("valid1").innerHTML = "Error! Due date must be later than today.";
+            document.getElementById("valid1").innerHTML = "The date must be Bigger or Equal to today's date";
             return false;
         }
         else if (isNaN(validDate)) {
-            document.getElementById("valid1").innerHTML = "Please enter a date";
+            document.getElementById("valid1").innerHTML = "Please enter the due date";
             return false;
         }
         else {
@@ -57,13 +63,13 @@ function validateTaskForm() {
     function validAssign() {
         const element = document.getElementById("assign").value;
         if (!regEx.test(element) && element.length < 8) {
-            document.getElementById("errorMsg").innerHTML = "8 characters minimum, only contains letters";
+            document.getElementById("errorMsg").innerHTML = "Assigned to text at least 8 characters and only contains letters";
             return false;
         } else if (!regEx.test(element)) {
-            document.getElementById("errorMsg").innerHTML = "Only contains a combination of letters";
+            document.getElementById("errorMsg").innerHTML = "The Assigned to field Only contain letters";
             return false;
         } else if (regEx.test(element) && element.length < 8) {
-            document.getElementById("errorMsg").innerHTML = "8 characters minimum";
+            document.getElementById("errorMsg").innerHTML = "Assigned to should be more then 8 characters";
             return false;
         }
         else {
@@ -86,3 +92,10 @@ function currentDate() {
 }
 currentDate(); //Calling the current date function
 
+// Khushboo's code for Status:
+const validateStatus = document.getElementById('status');
+if (validateStatus.selectedIndex === 0) 
+{
+    document.getElementById('error1').innerHTML = 'Please select an status option';
+    return false;
+}
